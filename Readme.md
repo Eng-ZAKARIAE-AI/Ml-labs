@@ -1,4 +1,4 @@
-# 🧪 Ml-labs (Machine Learning & AI Engineering Portfolio)
+# Ml-labs (Machine Learning & AI Engineering)
 
 Welcome to **Ml-labs**! This repository serves as a centralized hub and showcase for production-ready Machine Learning projects, Exploratory Data Analysis (EDA), Predictive Analytics, and AI models built by **Eng-ZAKARIAE-AI**.
 
