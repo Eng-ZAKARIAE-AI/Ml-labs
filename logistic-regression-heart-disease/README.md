@@ -16,3 +16,6 @@ pour préparer un projet concret, réutilisable et prêt à la production.
 | Interface utilisateur (malade) | ![front-end malade](./screenshots/front-end-2-malde.png) |
 | Prédiction — pas de maladie | ![prediction saine](./screenshots/prediction-output-no-maladie.png) |
 | Prédiction — maladie | ![prediction malade](./screenshots/prediction-output-malde.png) |
+
+
+# GOD Protect ALL enshallah
