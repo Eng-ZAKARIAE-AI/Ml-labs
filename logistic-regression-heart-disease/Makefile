@@ -20,7 +20,7 @@ run: venv
 	. $(VENV) && gunicorn api.server:app --bind 0.0.0.0:5000 --workers 2 --threads 4
 
 test: venv
-	. $(VENV) && python3 tests/client.py
+	. $(VENV) && pip install pytest && . $(VENV) && python3 -m pytest tests/ -v
 
 docker-build:
 	docker build -t logistic-regression-api .
