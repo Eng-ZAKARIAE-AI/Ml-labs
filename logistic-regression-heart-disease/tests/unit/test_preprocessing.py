@@ -1,8 +1,8 @@
-import sys
 import os
+import sys
+
 import numpy as np
 import pandas as pd
-import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
@@ -33,8 +33,18 @@ class TestPreprocessing:
 
     def test_feature_count(self):
         FEATURE_NAMES = [
-            "age", "sex", "cp", "trestbps", "chol", "fbs",
-            "restecg", "thalach", "exang", "oldpeak",
-            "slope", "ca", "thal",
+            "age",
+            "sex",
+            "cp",
+            "trestbps",
+            "chol",
+            "fbs",
+            "restecg",
+            "thalach",
+            "exang",
+            "oldpeak",
+            "slope",
+            "ca",
+            "thal",
         ]
         assert len(FEATURE_NAMES) == 13

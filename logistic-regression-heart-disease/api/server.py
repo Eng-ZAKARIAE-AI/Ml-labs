@@ -1,6 +1,6 @@
-from flask import Flask, jsonify, request
 import joblib
 import numpy as np
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -54,14 +54,16 @@ def predict():
         p = sigmoid(z)  # 3. PROBABILITÉ
         pred = int(p[0] >= 0.5)  # 4. CLASSE
 
-        return jsonify({
-            "logit": round(float(z[0]), 4),
-            "probability": round(float(p[0]), 4),
-            "prediction": pred,
-            "label": "Maladie cardiaque" if pred == 1 else "Pas de maladie",
-        })
+        return jsonify(
+            {
+                "logit": round(float(z[0]), 4),
+                "probability": round(float(p[0]), 4),
+                "prediction": pred,
+                "label": "Maladie cardiaque" if pred == 1 else "Pas de maladie",
+            }
+        )
 
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         return jsonify({"error": str(e)}), 500
 
 

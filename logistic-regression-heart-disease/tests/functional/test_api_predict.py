@@ -1,6 +1,3 @@
-import pytest
-
-
 class TestPredictEndpoint:
     def test_predict_valid_patient(self, client, sample_patient):
         response = client.post("/predict", json=sample_patient)

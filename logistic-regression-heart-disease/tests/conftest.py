@@ -1,7 +1,7 @@
 import os
-import sys
-import numpy as np
+
 import joblib
+import numpy as np
 import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,6 +22,7 @@ def ensure_artifacts():
     scaler_path = os.path.join(ARTIFACTS_DIR, "scaler.pkl")
     if not os.path.exists(scaler_path):
         from sklearn.preprocessing import StandardScaler
+
         scaler = StandardScaler()
         scaler.fit(np.zeros((1, 13)))
         joblib.dump(scaler, scaler_path)
@@ -30,6 +31,7 @@ def ensure_artifacts():
 @pytest.fixture
 def client():
     from api.server import app
+
     app.config["TESTING"] = True
     with app.test_client() as client:
         yield client

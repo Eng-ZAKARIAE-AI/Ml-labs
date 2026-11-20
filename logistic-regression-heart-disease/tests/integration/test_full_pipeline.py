@@ -1,13 +1,13 @@
 import os
 import sys
-import numpy as np
+
 import joblib
-import pytest
+import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
-from src.train import train_logistic_regression, sigmoid
+from src.train import sigmoid, train_logistic_regression
 
 
 class TestFullPipeline:

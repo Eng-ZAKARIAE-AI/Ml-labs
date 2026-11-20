@@ -54,6 +54,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
 
+
 # ============================================================
 # 3. RÉGRESSION LOGISTIQUE — DEPUIS ZÉRO (From Scratch)
 # ============================================================
@@ -97,9 +98,7 @@ def train_logistic_regression(X, y, lr=0.1, epochs=2000, verbose=True):
 
 
 print("\n=== ENTRAÎNEMENT (from scratch) ===")
-w, b, final_loss = train_logistic_regression(
-    X_train, y_train, lr=0.1, epochs=2000
-)
+w, b, final_loss = train_logistic_regression(X_train, y_train, lr=0.1, epochs=2000)
 
 # ============================================================
 # 4. ÉVALUATION & COMPARAISON SKLEARN

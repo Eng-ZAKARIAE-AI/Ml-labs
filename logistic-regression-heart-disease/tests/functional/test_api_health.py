@@ -1,6 +1,3 @@
-import pytest
-
-
 class TestHealthEndpoint:
     def test_health_returns_ok(self, client):
         response = client.get("/health")
